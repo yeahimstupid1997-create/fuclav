@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aurora Social Sandbox</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header>
+    <div><strong>AURORA</strong><span>SOCIAL</span></div>
+    <div class="pill">SANDBOX • NO LIVE PAYMENTS</div>
+  </header>
+  <main>
+    <section class="hero card">
+      <div>
+        <p class="eyebrow">Demo Player</p>
+        <h1>Play the prototype economy safely.</h1>
+        <p>GC and promotional SC remain separate. All results are server-authoritative and operator controls cannot select winners.</p>
+      </div>
+      <div class="wallets">
+        <div><span>Gold Coins</span><b id="gc">—</b></div>
+        <div><span>Sweeps Coins</span><b id="sc">—</b></div>
+      </div>
+    </section>
+
+    <section class="actions card">
+      <button id="daily">Claim daily grant</button>
+      <button class="secondary" data-buy="starter">Test $4.99 package</button>
+      <button class="secondary" data-buy="popular">Test $19.99 package</button>
+    </section>
+
+    <h2>Games</h2>
+    <section id="games" class="grid"></section>
+
+    <section class="card redeem">
+      <div><h2>Sandbox redemption</h2><p>Moves SC into a pending liability. It does not send cash.</p></div>
+      <div class="row"><input id="redeemAmount" type="number" min="1" value="1" /><button id="redeem">Reserve SC</button></div>
+    </section>
+
+    <section class="card operator">
+      <div><h2>Operator treasury</h2><p>Read-only liability and exposure view.</p></div>
+      <button id="treasury" class="secondary">Refresh treasury</button>
+      <pre id="treasuryOut">Admin key defaults to dev-admin-key in sandbox.</pre>
+    </section>
+
+    <div id="toast"></div>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
